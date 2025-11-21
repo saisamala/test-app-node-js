@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git url: 'https://github.com/saisamala/testing-apps', branch: 'main'
+                git url: 'https://github.com/saisamala/test-app-node-js', branch: 'main'
             }
         }
         stage('Build') {
             steps {
-                sh 'cd test-app-node-js && npm install'
+                sh 'npm install'
             }
         }
         stage('Test') {
